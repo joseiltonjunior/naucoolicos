@@ -1,0 +1,762 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Naucoólicos - a torcida do Náutico</title>
+<meta name="description" content="Conheça os Naucoólicos, torcida do Náutico: história, identidade, fotos, próximos jogos e contato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+/* Layout: hero em duas colunas (texto + mascote), faixa do próximo jogo, história, logo, faixa dos Aflitos,
+   galeria, jogos, loja e contato. Paleta clara: branco e vermelho do Náutico, com vinho no lugar do preto,
+   para não lembrar as cores dos rivais. As listras vermelhas e brancas são o elemento de identidade. */
+:root {
+  --paper: #ffffff;
+  --paper-2: #fbf3f1;
+  --paper-3: #f4e3e0;
+  --ink: #2a0a0f;
+  --ink-soft: #6a474d;
+  --line: rgba(42, 10, 15, 0.14);
+  --flare: #c8141f;
+  --flare-hi: #e3262f;
+  --wine: #7a0f1c;
+  --title: #8f1829;
+  --wine-deep: #5a0914;
+  --font-display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-accent: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, ul { margin: 0; }
+h1, h2, h3 { color: var(--title); }
+ul { padding: 0; list-style: none; }
+section[id], .sub[id] { scroll-margin-top: 92px; }
+
+.wrap { width: min(1180px, 100%); margin-inline: auto; padding-inline: max(16px, 3vw); }
+
+:focus-visible { outline: 3px solid var(--flare); outline-offset: 3px; border-radius: 4px; }
+
+/* ---------- botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  min-height: 48px; padding: .7rem 1.4rem;
+  font: 700 .95rem/1 var(--font-body); letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+  border: 2px solid var(--flare); border-radius: 6px; cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.btn--solid { background: var(--flare); color: #fff; }
+.btn--solid:hover { background: var(--wine); border-color: var(--wine); }
+.btn--ghost { background: rgba(255, 255, 255, .7); color: var(--ink); border-color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: #fff; }
+.btn:active { transform: translateY(1px); }
+
+/* ---------- cabeçalho ---------- */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.top__in { display: flex; align-items: center; gap: 1.25rem; min-height: 76px; flex-wrap: wrap; padding-block: .5rem; }
+.brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; margin-right: auto; }
+.brand img { height: 52px; width: auto; }
+.brand__t { display: flex; flex-direction: column; line-height: 1.05; }
+.brand__t b { font: 400 1.55rem/1 var(--font-display); letter-spacing: .04em; text-transform: uppercase; color: var(--flare); }
+.brand__t small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: .3rem; }
+.nav { display: flex; gap: 1.3rem; }
+.nav a {
+  position: relative; padding-block: .4rem;
+  font-size: .85rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft);
+}
+.nav a:hover { color: var(--ink); }
+.nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--flare); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+.nav a:hover::after { transform: scaleX(1); }
+.nav__cta { display: none; }
+.menu-btn {
+  display: none; align-items: center; min-height: 44px; padding: 0 1rem;
+  background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+  font: 600 .85rem var(--font-body); letter-spacing: .1em; text-transform: uppercase; cursor: pointer;
+}
+
+/* ---------- hero ---------- */
+.hero { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(2rem, 5vw, 3.5rem) clamp(2rem, 4vw, 3rem); }
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .86) 46%, rgba(255, 255, 255, .34) 74%, rgba(255, 255, 255, .1) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, #ffffff 100%);
+}
+.hero__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 68%; opacity: .92; }
+.hero__in { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); align-items: center; gap: clamp(1rem, 3vw, 2.5rem); }
+.eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--flare); display: flex; align-items: center; gap: .8rem; }
+.eyebrow::after { content: ''; width: 56px; height: 2px; background: var(--flare); }
+.hero h1 {
+  margin-top: 1rem;
+  font: 400 clamp(3rem, 8.2vw, 6.6rem)/.96 var(--font-display); text-transform: uppercase; letter-spacing: .005em; text-wrap: balance;
+}
+.hero h1 span { display: block; }
+.hero h1 em { display: block; font-style: normal; color: var(--flare); background: linear-gradient(180deg, #e3262f 10%, #a30e18 95%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.lede { margin-top: 1.4rem; max-width: 30ch; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink); }
+.cta-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+.hero__art { position: relative; margin: 0; display: grid; place-items: center; }
+.hero__art::before { content: ''; position: absolute; inset: 8% 4% 2%; z-index: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(200, 20, 31, .38), rgba(200, 20, 31, 0) 100%); }
+.hero__art img { position: relative; z-index: 1; width: auto; height: auto; max-width: 100%; max-height: min(560px, 62vh); filter: drop-shadow(0 22px 24px rgba(90, 9, 20, .35)); }
+.hero + .wrap { padding-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* ---------- próximo jogo ---------- */
+.next {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1.5rem 2rem;
+  padding: 1.4rem clamp(1rem, 2.4vw, 2rem);
+  color: #fff;
+  background: linear-gradient(135deg, var(--wine-deep), var(--wine));
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -22px rgba(90, 9, 20, .8);
+}
+.next__label b { display: block; font: 400 1.7rem/1 var(--font-display); letter-spacing: .03em; text-transform: uppercase; }
+.next__label small { display: block; margin-top: .45rem; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+.tag { display: inline-block; margin-top: .6rem; padding: .15rem .55rem; font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: rgba(255, 255, 255, .18); border-radius: 999px; }
+.next__match { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .9rem 1.6rem; }
+.teams { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .4rem 1rem; font: 400 clamp(1.6rem, 3.4vw, 2.4rem)/1 var(--font-display); text-transform: uppercase; }
+.teams i { font: italic 600 1.3rem var(--font-accent); color: rgba(255, 255, 255, .7); text-transform: none; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.meta span { white-space: nowrap; }
+.next .meta { color: rgba(255, 255, 255, .85); }
+.next .btn--solid { background: #fff; color: var(--wine); border-color: #fff; }
+.next .btn--solid:hover { background: var(--paper-3); border-color: var(--paper-3); }
+
+/* ---------- seções ---------- */
+.sec { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.sec-h { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+.sec-h h2 { font: 400 clamp(1.8rem, 3.6vw, 2.5rem)/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
+.sec-h::after { content: ''; flex: 1 1 80px; min-width: 40px; height: 3px; background: linear-gradient(90deg, var(--flare), transparent); order: 1; }
+.sec-h p { order: 2; flex: 0 1 auto; font-size: .85rem; color: var(--ink-soft); letter-spacing: .04em; }
+
+/* história */
+.hist { background: var(--paper-2); }
+.hist__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(1.2rem, 3vw, 3rem); align-items: center; }
+.hist h2 { margin-top: 1rem; font: 400 clamp(3.4rem, 8vw, 6rem)/.9 var(--font-display); text-transform: uppercase; }
+.hist h2 em { display: block; font-style: normal; color: var(--flare); background: linear-gradient(180deg, #e3262f 10%, #a30e18 95%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hist__b { display: grid; gap: 1.4rem; justify-items: start; }
+.hist__b p { max-width: 46ch; font-size: 1.12rem; }
+.values { display: flex; flex-wrap: wrap; gap: .5rem; }
+.values li { padding: .35rem .8rem; font: 400 .95rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--wine); background: #fff; border: 1px solid var(--line); border-radius: 999px; }
+
+/* nossa logo */
+.logo-sec { position: relative; isolation: isolate; overflow: hidden; }
+.logo-sec::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 45% 60% at 24% 45%, rgba(200, 20, 31, .13), transparent 70%); }
+.logo__in { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+.logo-sec h2 { margin: 1rem 0 1.6rem; font: 400 clamp(2.6rem, 6vw, 4.4rem)/.95 var(--font-display); text-transform: uppercase; }
+.crest { position: relative; width: 100%; max-width: 520px; aspect-ratio: 449 / 413; margin-inline: auto; }
+.crest > img { width: 100%; height: 100%; filter: drop-shadow(0 22px 22px rgba(90, 9, 20, .3)); }
+.zone { position: absolute; transform: translate(-50%, -50%); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 0 0 2px rgba(42, 10, 15, .5), 0 0 28px rgba(255, 255, 255, .7); opacity: 0; transition: opacity .2s ease; pointer-events: none; }
+.zone.on { opacity: 1; }
+.zone--shield { border-radius: 9% 9% 50% 50% / 8% 8% 42% 42%; }
+.parts { display: grid; gap: .55rem; }
+.part { display: grid; gap: .3rem; width: 100%; padding: .9rem 1.1rem; text-align: left; color: var(--ink); background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 8px; cursor: pointer; font: inherit; transition: background-color .15s ease, border-color .15s ease; }
+.part b { color: var(--title); font: 400 1.25rem/1 var(--font-display); letter-spacing: .05em; text-transform: uppercase; }
+.part span { color: var(--ink-soft); font-size: .98rem; line-height: 1.45; }
+.part:hover { border-color: rgba(200, 20, 31, .5); }
+.part.on { background: rgba(200, 20, 31, .07); border-color: rgba(200, 20, 31, .45); border-left-color: var(--flare); }
+.part.on span { color: var(--ink); }
+.pride { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1rem clamp(1.5rem, 4vw, 4rem); margin-top: clamp(2rem, 5vw, 3.2rem); padding-top: clamp(1.6rem, 4vw, 2.4rem); border-top: 1px solid var(--line); align-items: start; }
+.pride h3 { font: 400 clamp(1.8rem, 3.6vw, 2.5rem)/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; color: var(--flare); }
+.pride p { max-width: 52ch; font-size: 1.1rem; }
+
+/* faixa dos Aflitos */
+.band { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: flex-end; min-height: clamp(300px, 42vw, 480px); background: var(--wine); color: #fff; }
+.band > img { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; object-position: 50% 72%; filter: grayscale(1) contrast(1.2) brightness(1.1); }
+.band::before { content: ''; position: absolute; inset: 0; z-index: -2; background: #c8141f; mix-blend-mode: multiply; }
+.band::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(90, 9, 20, 0) 35%, rgba(90, 9, 20, .9) 100%); }
+.band__in { width: min(1180px, 100%); padding-block: 2rem 2.4rem; }
+.band h2 { color: #fff; margin-top: .8rem; font: 400 clamp(2.6rem, 7vw, 5.2rem)/.95 var(--font-display); text-transform: uppercase; text-shadow: 0 4px 24px rgba(90, 9, 20, .5); }
+.band .eyebrow { color: #fff; }
+.band .eyebrow::after { background: #fff; }
+
+/* mosaico de fotos */
+.mosaic { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: clamp(150px, 18vw, 215px); grid-auto-flow: dense; gap: .8rem; }
+.mosaic .gal__i { aspect-ratio: auto; height: 100%; }
+.m-big { grid-column: span 2; grid-row: span 2; }
+.m-tall { grid-row: span 2; }
+.sub { margin: 2.6rem 0 1rem; font: 400 1.25rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--wine); }
+
+/* galeria */
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+.gal__i {
+  position: relative; display: block; padding: 0; aspect-ratio: 4 / 5; overflow: hidden; cursor: zoom-in;
+  background: var(--paper-3); border: 1px solid var(--line); border-radius: 10px; color: #fff; text-align: left;
+}
+.gal__i img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.gal__i:hover img { transform: scale(1.04); }
+.gal__i span {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1rem .9rem;
+  background: linear-gradient(180deg, transparent, rgba(90, 9, 20, .9));
+  font: 400 1.15rem/1.1 var(--font-display); letter-spacing: .04em; text-transform: uppercase;
+}
+.gal__i span small { display: block; margin-top: .3rem; font: 500 .72rem var(--font-body); letter-spacing: .12em; color: rgba(255, 255, 255, .85); }
+
+/* jogos */
+#jogos, #contato { background: var(--paper-2); }
+.pill { padding: .3rem .8rem; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--wine); background: rgba(200, 20, 31, .08); border: 1px solid rgba(200, 20, 31, .4); border-radius: 999px; white-space: nowrap; }
+
+/* calendário */
+.cal { display: grid; gap: .6rem; padding: 0; list-style: none; }
+.cal__r { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: center; gap: .6rem 1.4rem; padding: .8rem 1.2rem .8rem .8rem; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.cal__r.is-next { border-color: var(--flare); box-shadow: 0 0 0 1px var(--flare); }
+.cal__d { display: grid; justify-items: center; padding-block: .3rem; line-height: 1; }
+.cal__d b { color: var(--title); font: 400 2.1rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.cal__d span { margin-top: .25rem; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--flare); }
+.cal__d small { margin-top: .2rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.cal__t h3 { font: 400 clamp(1.25rem, 2.6vw, 1.7rem)/1.1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
+.cal__t .me { color: var(--flare); }
+.cal__tag { display: none; margin-bottom: .35rem; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--flare); }
+.is-next .cal__tag { display: block; }
+.cal__m { display: grid; justify-items: end; gap: .35rem; }
+.cal__m small { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* loja */
+
+/* loja: carrossel de produtos */
+.shop__h { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+.shop__h h2 { margin-top: .8rem; font: 400 clamp(1.9rem, 4vw, 2.8rem)/1 var(--font-display); text-transform: uppercase; }
+.shop__h p:last-child { margin-top: .8rem; max-width: 44ch; color: var(--ink-soft); }
+.car__nav { display: flex; gap: .5rem; }
+.car__nav button { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
+.car__nav button:hover:not(:disabled) { color: #fff; background: var(--flare); border-color: var(--flare); }
+.car__nav button:disabled { opacity: .35; cursor: default; }
+.car { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .9rem; scrollbar-width: thin; scrollbar-color: var(--flare) var(--paper-3); }
+.prod { flex: 0 0 min(78%, 250px); scroll-snap-align: start; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.prod__img { display: grid; place-items: center; aspect-ratio: 1; background: linear-gradient(160deg, var(--paper-2), var(--paper-3)); }
+.prod__img svg { width: 58%; height: auto; }
+.prod__b { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .9rem 1rem; }
+.prod__b h3 { font: 400 1.25rem/1 var(--font-display); text-transform: uppercase; letter-spacing: .04em; }
+
+/* contato */
+.join { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 2rem clamp(1.5rem, 5vw, 4rem); align-items: start; }
+.join h2 { font: 400 clamp(2.2rem, 5vw, 3.6rem)/.95 var(--font-display); text-transform: uppercase; }
+.join > div > p { margin-top: 1rem; max-width: 38ch; color: var(--ink-soft); }
+.redes { display: grid; gap: .5rem; margin-top: 1.6rem; font-size: .9rem; }
+.redes li { display: flex; justify-content: space-between; gap: 1rem; max-width: 320px; padding-block: .5rem; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.redes a { color: var(--flare); font-weight: 700; text-decoration: none; }
+.redes a:hover { text-decoration: underline; }
+.redes b { color: var(--ink); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .8rem; }
+form { display: grid; gap: 1rem; padding: clamp(1.2rem, 3vw, 2rem); background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 40px -30px rgba(90, 9, 20, .5); }
+.f2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+label { display: grid; gap: .4rem; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+input, select {
+  width: 100%; min-height: 48px; padding: .6rem .9rem; font: 500 1rem var(--font-body); color: var(--ink);
+  background: var(--paper-2); border: 1px solid rgba(42, 10, 15, .3); border-radius: 6px;
+}
+input::placeholder { color: #8f747a; }
+input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(--flare); outline-offset: 1px; background: #fff; }
+.status { min-height: 1.4em; font-size: .9rem; color: var(--ink-soft); }
+.status.ok { color: var(--wine); font-weight: 600; }
+.status.err { color: var(--flare); font-weight: 600; }
+
+/* rodapé */
+
+.foot { background: var(--paper); color: var(--ink); border-top: 1px solid var(--line); }
+.foot__top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr); gap: 2.4rem clamp(2rem, 5vw, 4.5rem); padding-block: clamp(2.2rem, 5vw, 3.4rem); }
+.foot__brand { display: grid; gap: 1.2rem; justify-items: start; align-content: start; }
+.foot__brand .brand img { height: 64px; }
+.foot__brand q { quotes: none; max-width: 28ch; font: italic 600 1.2rem/1.3 var(--font-accent); color: var(--wine); }
+.foot__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.8rem 1.5rem; }
+.foot__cols h3 { padding-bottom: .6rem; margin-bottom: .8rem; font: 400 1.1rem/1 var(--font-display); letter-spacing: .06em; text-transform: uppercase; border-bottom: 2px solid var(--flare); }
+.foot__cols ul { display: grid; gap: .5rem; }
+.foot__cols a { color: var(--ink-soft); font-size: .95rem; text-decoration: none; }
+.foot__cols a:hover { color: var(--flare); text-decoration: underline; }
+.soon { display: inline-block; padding: .1rem .55rem; font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--wine); background: rgba(200, 20, 31, .08); border: 1px solid rgba(200, 20, 31, .35); border-radius: 999px; }
+.foot__bar { border-top: 1px solid var(--line); background: var(--paper-2); }
+.foot__bar-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; padding-block: 1rem; }
+.foot__bar small { color: var(--ink-soft); font-size: .8rem; }
+.foot__bar a { color: var(--flare); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+.foot__bar a:hover { text-decoration: underline; }
+
+/* lightbox */
+.lb { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: .8rem; padding: 1.2rem; background: rgba(58, 6, 14, .95); }
+.lb[hidden] { display: none; }
+.lb img { max-height: 82vh; max-width: min(92vw, 900px); width: auto; height: auto; border-radius: 8px; margin-inline: auto; }
+.lb p { text-align: center; color: rgba(255, 255, 255, .85); font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
+.lb__x { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 12px); right: 12px; width: 48px; height: 48px; font-size: 1.8rem; line-height: 1; color: #fff; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .3); border-radius: 50%; cursor: pointer; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 1100px) {
+  .menu-btn { display: inline-flex; }
+  .top__cta { display: none; }
+  .nav { display: none; flex-basis: 100%; flex-direction: column; gap: 0; padding-bottom: .6rem; }
+  .nav.open { display: flex; }
+  .nav a { padding: .9rem 0; border-top: 1px solid var(--line); }
+  .nav a::after { display: none; }
+  .nav__cta { display: inline-flex; margin-top: .6rem; border-top: 0 !important; color: #fff !important; padding: .7rem 1.4rem !important; }
+}
+@media (max-width: 860px) {
+  .hero__in { grid-template-columns: minmax(0, 1fr); }
+  .hero__art { max-width: 560px; margin-inline: auto; margin-top: -.5rem; }
+  .next { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; }
+  .next__match { justify-content: center; }
+  .join, .logo__in, .pride, .foot__top { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
+}
+@media (max-width: 640px) {
+  .hist__in { grid-template-columns: minmax(0, 1fr); }
+  .cal__r { grid-template-columns: 60px minmax(0, 1fr); }
+  .cal__d b { font-size: 1.7rem; }
+  .cal__m { grid-column: 2; grid-auto-flow: column; justify-content: start; justify-items: start; align-items: center; gap: .8rem; }
+  .f2 { grid-template-columns: minmax(0, 1fr); }
+  .brand__t b { font-size: 1.3rem; }
+  .brand img { height: 44px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+
+</head><body>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#inicio" aria-label="Naucoólicos, início">
+      <img src="img/logo-transparente.png" alt="" width="449" height="413">
+      <span class="brand__t"><b>Naucoólicos</b><small>Um brinde ao Náutico</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#historia">História</a>
+      <a href="#logo">Logo</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#jogos">Jogos</a>
+      <a href="#loja">Loja</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn--solid nav__cta" href="#contato">Seja Naucoólico</a>
+    </nav>
+    <a class="btn btn--solid top__cta" href="#contato">Seja Naucoólico</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <img class="hero__bg" src="img/hero-bg.jpg" alt="" width="1200" height="799">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow">Torcida do Náutico</p>
+        <h1><span>A torcida que</span><em>carrega o Timbu</em><span>no peito.</span></h1>
+        <p class="lede">Paixão, arquibancada, identidade e tradição em vermelho e branco.</p>
+        <div class="cta-row">
+          <a class="btn btn--solid" href="#historia">Conheça a torcida</a>
+          <a class="btn btn--ghost" href="#jogos">Ver próximo jogo</a>
+        </div>
+      </div>
+      <figure class="hero__art">
+        <img src="img/mascote.webp" alt="Mascote dos Naucoólicos: um rato cinza de olhos vermelhos, dentes à mostra e camisa 05, com uma garrafa em uma mão e uma bola de couro na outra" width="720" height="900">
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="next" id="proximo" aria-label="Próximo jogo">
+      <div class="next__label">
+        <b>Próximo jogo</b>
+        <small>Brasileirão Série B</small>
+      </div>
+      <div class="next__match">
+        <div class="teams"><span id="nextHome">Náutico</span><i>x</i><span id="nextAway">Novorizontino</span></div>
+        <div class="meta"><span id="nextDate">Quinta, 8 de outubro</span><span id="nextTime">19h30</span><span id="nextVenue">Em casa</span></div>
+      </div>
+      <a class="btn btn--solid" href="#jogos">Ver calendário</a>
+    </section>
+  </div>
+
+  <section class="sec hist" id="historia">
+    <div class="wrap hist__in">
+      <div>
+        <p class="eyebrow">Raízes que nos unem</p>
+        <h2>Nossa<em>história</em></h2>
+      </div>
+      <div class="hist__b">
+        <p>O Naucoólicos nasceu da paixão pelo Náutico e da união de uma torcida que vive o clube de forma intensa, verdadeira e incondicional. Mais que uma torcida, somos uma família que carrega o Timbu no peito, dentro e fora dos estádios.</p>
+        <ul class="values" aria-label="Valores da torcida">
+          <li>Tradição</li><li>Respeito</li><li>Arquibancada</li><li>Identidade</li><li>Sempre</li>
+        </ul>
+        <a class="btn btn--ghost" href="#contato">Faça parte</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec logo-sec" id="logo">
+    <div class="wrap">
+      <div class="logo__in">
+        <div class="crest">
+          <img src="img/logo-transparente.png" alt="Escudo dos Naucoólicos: bola antiga, caneca de chopp, a palavra Naucoólicos, remos cruzados com as letras C N C e uma folha de ramos de cada lado" width="449" height="413">
+          <span class="zone on" data-for="bola" style="left:36.2%;top:29.1%;width:22%;height:24%"></span>
+          <span class="zone" data-for="caneca" style="left:64.6%;top:28.5%;width:18%;height:25%"></span>
+          <span class="zone" data-for="folhas" style="left:12.5%;top:54%;width:21%;height:78%"></span>
+          <span class="zone" data-for="folhas" style="left:89%;top:54%;width:21%;height:78%"></span>
+          <span class="zone zone--shield" data-for="escudo" style="left:50.3%;top:48%;width:70%;height:83%"></span>
+          <span class="zone" data-for="remos" style="left:50%;top:71%;width:17%;height:19%"></span>
+          <span class="zone" data-for="siglas" style="left:50.3%;top:73.5%;width:24%;height:18%"></span>
+        </div>
+        <div>
+          <p class="eyebrow">Apresentação da logo</p>
+          <h2>Nossa logo</h2>
+          <ul class="parts" aria-label="Elementos da logo">
+            <li><button class="part on" type="button" data-k="bola" aria-pressed="true"><b>A bola</b><span>A bola de futebol antiga representa a crítica ao futebol moderno.</span></button></li>
+            <li><button class="part" type="button" data-k="caneca" aria-pressed="false"><b>A caneca de chopp</b><span>A caneca faz referência ao movimento de torcida chopp.</span></button></li>
+            <li><button class="part" type="button" data-k="folhas" aria-pressed="false"><b>A folha de ramos</b><span>As folhas de ramos simbolizam amizade, respeito e admiração (ou o lúpulo da cerveja).</span></button></li>
+            <li><button class="part" type="button" data-k="escudo" aria-pressed="false"><b>O escudo</b><span>A base do nosso escudo faz referência ao primeiro escudo do Náutico.</span></button></li>
+            <li><button class="part" type="button" data-k="remos" aria-pressed="false"><b>Os remos</b><span>Uma homenagem ao remo, esporte que deu origem ao clube.</span></button></li>
+            <li><button class="part" type="button" data-k="siglas" aria-pressed="false"><b>As siglas</b><span>As siglas que aparecem na nossa logo fazem referência às siglas do Clube Náutico Capibaribe.</span></button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pride">
+        <h3>Um símbolo de orgulho</h3>
+        <p>A nossa logo é um símbolo do nosso orgulho e paixão pelo Clube Náutico Capibaribe. Estamos orgulhosos de representar nossa torcida e de mostrar nosso amor pelo clube.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="aflitos" aria-label="Estádio dos Aflitos">
+    <img src="img/foto-aflitos.jpg" alt="Arquibancada vermelha e branca dos Aflitos com a palavra NÁUTICO e o ano 1901, vista do gramado sob céu azul" width="1080" height="863" loading="lazy">
+    <div class="band__in wrap">
+      <p class="eyebrow">Estádio Eládio de Barros Carvalho</p>
+      <h2>O caldeirão<br>dos Aflitos</h2>
+    </div>
+  </section>
+
+  <section class="sec" id="galeria">
+    <div class="wrap">
+      <div class="sec-h"><h2>Galeria da arquibancada</h2><p>Fotos e artes da torcida. Toque para ampliar.</p></div>
+      <div class="mosaic">
+        <button class="gal__i m-big" type="button" data-src="img/foto-fumaca.jpg" data-cap="Fumaça e bandeiras">
+          <img src="img/foto-fumaca.jpg" alt="Torcida de braços para o alto sob fumaça branca, com bandeiras vermelhas e brancas e um grande mosaico ao fundo" loading="lazy">
+          <span>Fumaça e bandeiras</span>
+        </button>
+        <button class="gal__i" type="button" data-src="img/foto-mosaico.jpg" data-cap="Mosaico e bandeiras">
+          <img src="img/foto-mosaico.jpg" alt="Torcida lotando as arquibancadas com um grande mosaico vermelho e bandeiras brancas, fumaça no gramado" loading="lazy">
+          <span>Mosaico e bandeiras</span>
+        </button>
+        <button class="gal__i m-tall" type="button" data-src="img/foto-aerea.jpg" data-cap="Aflitos visto de cima">
+          <img src="img/foto-aerea.jpg" alt="Vista aérea dos Aflitos com bandeirões vermelhos e brancos cobrindo as arquibancadas ao redor do gramado" loading="lazy">
+          <span>Aflitos visto de cima</span>
+        </button>
+        <button class="gal__i" type="button" data-src="img/foto-bandeiras.jpg" data-cap="Mar de bandeiras">
+          <img src="img/foto-bandeiras.jpg" alt="Torcida agitando bandeiras vermelhas e brancas no alambrado ao fim da tarde" loading="lazy">
+          <span>Mar de bandeiras</span>
+        </button>
+      </div>
+      <h3 class="sub" id="artes">Artes da torcida</h3>
+      <div class="gal">
+        <button class="gal__i" type="button" data-src="img/poster-londrina.jpg" data-cap="Dia de Timbu">
+          <img src="img/poster-londrina.jpg" alt="Cartaz Dia de Timbu: o mascote agachado, com o jogo contra o Londrina nos Aflitos" loading="lazy">
+          <span>Dia de Timbu<small>Náutico x Londrina</small></span>
+        </button>
+        <button class="gal__i" type="button" data-src="img/poster-vilanova.jpg" data-cap="Avante Timbu">
+          <img src="img/poster-vilanova.jpg" alt="Cartaz Avante Timbu: o mascote com uma garrafa e uma bola de couro em um estádio ao entardecer" loading="lazy">
+          <span>Avante Timbu<small>Vila Nova x Náutico</small></span>
+        </button>
+        <button class="gal__i" type="button" data-src="img/poster-criciuma.jpg" data-cap="Hoje tem Náutico">
+          <img src="img/poster-criciuma.jpg" alt="Cartaz Hoje tem Náutico: o mascote diante do escudo dos Naucoólicos, com o jogo contra o Criciúma" loading="lazy">
+          <span>Hoje tem Náutico<small>Náutico x Criciúma</small></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="jogos">
+    <div class="wrap">
+      <div class="sec-h"><h2>Próximos jogos</h2><p>Brasileirão Série B</p></div>
+      <ol class="cal" id="cal" aria-label="Calendário do Náutico">
+      <li class="cal__r is-next" data-end="2026-10-08T22:30:00-03:00" data-home="Náutico" data-away="Novorizontino" data-date="Quinta, 8 de outubro" data-time="19h30" data-venue="Em casa">
+        <div class="cal__d"><b>08</b><span>Out</span><small>Qui</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3><span class="me">Náutico</span> x Novorizontino</h3></div>
+        <div class="cal__m"><span class="pill">19h30</span><small>Em casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-10-11T20:30:00-03:00" data-home="Náutico" data-away="Vila Nova" data-date="Domingo, 11 de outubro" data-time="17h30" data-venue="Em casa">
+        <div class="cal__d"><b>11</b><span>Out</span><small>Dom</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3><span class="me">Náutico</span> x Vila Nova</h3></div>
+        <div class="cal__m"><span class="pill">17h30</span><small>Em casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-10-19T22:30:00-03:00" data-home="Goiás" data-away="Náutico" data-date="Segunda, 19 de outubro" data-time="19h30" data-venue="Fora de casa">
+        <div class="cal__d"><b>19</b><span>Out</span><small>Seg</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3>Goiás x <span class="me">Náutico</span></h3></div>
+        <div class="cal__m"><span class="pill">19h30</span><small>Fora de casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-10-24T23:59:59-03:00" data-home="Juventude" data-away="Náutico" data-date="Sábado, 24 de outubro" data-time="Horário a confirmar" data-venue="Fora de casa">
+        <div class="cal__d"><b>24</b><span>Out</span><small>Sáb</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3>Juventude x <span class="me">Náutico</span></h3></div>
+        <div class="cal__m"><span class="pill">A confirmar</span><small>Fora de casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-10-31T23:59:59-03:00" data-home="Náutico" data-away="Avaí" data-date="Sábado, 31 de outubro" data-time="Horário a confirmar" data-venue="Em casa">
+        <div class="cal__d"><b>31</b><span>Out</span><small>Sáb</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3><span class="me">Náutico</span> x Avaí</h3></div>
+        <div class="cal__m"><span class="pill">A confirmar</span><small>Em casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-11-07T23:59:59-03:00" data-home="Náutico" data-away="CRB" data-date="Sábado, 7 de novembro" data-time="Horário a confirmar" data-venue="Em casa">
+        <div class="cal__d"><b>07</b><span>Nov</span><small>Sáb</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3><span class="me">Náutico</span> x CRB</h3></div>
+        <div class="cal__m"><span class="pill">A confirmar</span><small>Em casa</small></div>
+      </li>
+      <li class="cal__r" data-end="2026-11-14T23:59:59-03:00" data-home="Londrina" data-away="Náutico" data-date="Sábado, 14 de novembro" data-time="Horário a confirmar" data-venue="Fora de casa">
+        <div class="cal__d"><b>14</b><span>Nov</span><small>Sáb</small></div>
+        <div class="cal__t"><span class="cal__tag">Próximo jogo</span><h3>Londrina x <span class="me">Náutico</span></h3></div>
+        <div class="cal__m"><span class="pill">A confirmar</span><small>Fora de casa</small></div>
+      </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="loja">
+    <div class="wrap">
+      <div class="shop__h">
+        <div>
+          <p class="eyebrow">Em breve</p>
+          <h2>Coleção Naucoólicos</h2>
+          <p>Produtos da torcida que respira Náutico. A loja entra na segunda etapa do site.</p>
+        </div>
+        <div class="car__nav">
+          <button id="carPrev" type="button" aria-label="Produtos anteriores" disabled><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button id="carNext" type="button" aria-label="Próximos produtos"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+      <div class="car" id="car" role="region" aria-roledescription="carrossel" aria-label="Produtos da coleção" tabindex="0">
+        <article class="prod">
+          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="cj"><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z"/></clipPath></defs><g clip-path="url(#cj)"><rect x="0" y="0" width="120" height="120" fill="#ffffff"/><rect x="8" y="0" width="8" height="120" fill="#c8141f"/><rect x="24" y="0" width="8" height="120" fill="#c8141f"/><rect x="40" y="0" width="8" height="120" fill="#c8141f"/><rect x="56" y="0" width="8" height="120" fill="#c8141f"/><rect x="72" y="0" width="8" height="120" fill="#c8141f"/><rect x="88" y="0" width="8" height="120" fill="#c8141f"/><rect x="104" y="0" width="8" height="120" fill="#c8141f"/></g><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+          <div class="prod__b"><h3>Camisa</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="34" y="14" width="52" height="26" rx="8" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 38 H60 V100 H38 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M62 38 H84 V84 H62 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 56 H60 M38 72 H60 M38 88 H60 M62 56 H84 M62 72 H84" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M42 100 V108 M48 100 V108 M54 100 V108 M66 84 V92 M72 84 V92 M78 84 V92" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="prod__b"><h3>Cachecol</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M22 76 C22 42 42 26 62 26 C84 26 98 44 98 76 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 76 H100 C110 76 116 82 113 88 C112 90 108 90 104 90 H42 C30 90 22 84 22 76 Z" fill="#c8141f" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="62" cy="26" r="3.5" fill="#c8141f"/><path d="M62 28 C58 44 58 60 60 76" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="prod__b"><h3>Boné</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="60" cy="62" r="10" fill="#ffffff" stroke="#c8141f" stroke-width="2.5"/></svg></div>
+          <div class="prod__b"><h3>Camiseta</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M42 18 L20 28 L8 80 L26 84 L32 62 L32 106 L88 106 L88 62 L94 84 L112 80 L100 28 L78 18 C74 10 68 8 60 8 C52 8 46 10 42 18 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M44 20 C48 36 72 36 76 20" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M52 36 V52 M68 36 V52" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M42 82 H78 L82 100 H38 Z" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+          <div class="prod__b"><h3>Moletom</h3><span class="pill">Em breve</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contato">
+    <div class="wrap join">
+      <div>
+        <p class="eyebrow">Arquibancada aberta</p>
+        <h2 style="margin-top:1rem">Seja<br>Naucoólico</h2>
+        <p>Deixe seu contato para saber de jogos, caravanas e ações da torcida.</p>
+        <ul class="redes" aria-label="Redes da torcida">
+          <li><b>Instagram</b><a href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener">@naucoolicosoficial</a></li>
+        </ul>
+      </div>
+      <form id="joinForm" novalidate>
+        <div class="f2">
+          <label for="nome">Nome<input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required></label>
+          <label for="zap">WhatsApp<input id="zap" name="zap" type="tel" autocomplete="tel" inputmode="tel" placeholder="(81) 90000-0000" required></label>
+        </div>
+        <label for="interesse">Como quer participar
+          <select id="interesse" name="interesse">
+            <option>Ir aos jogos</option>
+            <option>Caravanas</option>
+            <option>Produtos da torcida</option>
+            <option>Outro</option>
+          </select>
+        </label>
+        <button class="btn btn--solid" type="submit">Quero entrar</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__top">
+    <div class="foot__brand">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <img src="img/logo-transparente.png" alt="" width="449" height="413">
+        <span class="brand__t"><b>Naucoólicos</b><small>Um brinde ao Náutico</small></span>
+      </a>
+      <q>Sempre com o Timbu, sempre na arquibancada.</q>
+      <a class="btn btn--solid" href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener">Siga no Instagram</a>
+    </div>
+    <nav class="foot__cols" aria-label="Links do rodapé">
+      <div>
+        <h3>A torcida</h3>
+        <ul>
+          <li><a href="#historia">Nossa história</a></li>
+          <li><a href="#logo">Nossa logo</a></li>
+          <li><a href="#contato">Seja Naucoólico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Jogos</h3>
+        <ul>
+          <li><a href="#proximo">Próximo jogo</a></li>
+          <li><a href="#jogos">Calendário</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Galeria</h3>
+        <ul>
+          <li><a href="#galeria">Fotos da arquibancada</a></li>
+          <li><a href="#artes">Artes da torcida</a></li>
+          <li><a href="#aflitos">O caldeirão dos Aflitos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Loja</h3>
+        <ul>
+          <li><a href="#loja">Coleção Naucoólicos</a></li>
+          <li><span class="soon">Em breve</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="#contato">Fale com a torcida</a></li>
+          <li><a href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="foot__bar">
+    <div class="wrap foot__bar-in">
+      <small>© 2026 Naucoólicos. Protótipo de site de torcida. Não é o site oficial do Clube Náutico Capibaribe.</small>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button class="lb__x" id="lbX" type="button" aria-label="Fechar">&times;</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+
+
+  var parts = document.querySelectorAll('.part');
+  var zones = document.querySelectorAll('.zone');
+  function pick(k) {
+    parts.forEach(function (p) {
+      var on = p.getAttribute('data-k') === k;
+      p.classList.toggle('on', on);
+      p.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    zones.forEach(function (z) { z.classList.toggle('on', z.getAttribute('data-for') === k); });
+  }
+  parts.forEach(function (p) {
+    var k = p.getAttribute('data-k');
+    p.addEventListener('mouseenter', function () { pick(k); });
+    p.addEventListener('focus', function () { pick(k); });
+    p.addEventListener('click', function () { pick(k); });
+  });
+
+
+  var cal = document.getElementById('cal');
+  if (cal) {
+    var now = new Date();
+    var nextRow = null;
+    cal.querySelectorAll('.cal__r').forEach(function (r) {
+      r.classList.remove('is-next');
+      if (new Date(r.getAttribute('data-end')) < now) { r.hidden = true; }
+      else if (!nextRow) { nextRow = r; }
+    });
+    var card = document.querySelector('.next');
+    if (nextRow) {
+      nextRow.classList.add('is-next');
+      document.getElementById('nextHome').textContent = nextRow.getAttribute('data-home');
+      document.getElementById('nextAway').textContent = nextRow.getAttribute('data-away');
+      document.getElementById('nextDate').textContent = nextRow.getAttribute('data-date');
+      document.getElementById('nextTime').textContent = nextRow.getAttribute('data-time');
+      document.getElementById('nextVenue').textContent = nextRow.getAttribute('data-venue');
+    } else if (card) {
+      card.hidden = true;
+    }
+  }
+
+
+  var car = document.getElementById('car');
+  if (car) {
+    var prev = document.getElementById('carPrev');
+    var next = document.getElementById('carNext');
+    var stepPx = function () {
+      var c = car.querySelector('.prod');
+      return c ? c.getBoundingClientRect().width + 16 : 260;
+    };
+    var upd = function () {
+      prev.disabled = car.scrollLeft <= 2;
+      next.disabled = car.scrollLeft + car.clientWidth >= car.scrollWidth - 2;
+    };
+    prev.addEventListener('click', function () { car.scrollBy({ left: -stepPx(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { car.scrollBy({ left: stepPx(), behavior: 'smooth' }); });
+    car.addEventListener('scroll', upd, { passive: true });
+    window.addEventListener('resize', upd);
+    upd();
+  }
+
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  var lastFocus = null;
+  function closeLb() {
+    lb.hidden = true;
+    lbImg.removeAttribute('src');
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.gal__i').forEach(function (b) {
+    b.addEventListener('click', function () {
+      lastFocus = b;
+      lbImg.src = b.getAttribute('data-src');
+      lbImg.alt = b.getAttribute('data-cap') || '';
+      lbCap.textContent = b.getAttribute('data-cap') || '';
+      lb.hidden = false;
+      document.getElementById('lbX').focus();
+    });
+  });
+  lb.addEventListener('click', function (e) { if (e.target !== lbImg) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+
+  var form = document.getElementById('joinForm');
+  var status = document.getElementById('status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = document.getElementById('nome').value.trim();
+    var zap = document.getElementById('zap').value.replace(/\D/g, '');
+    status.className = 'status';
+    if (!nome) { status.className = 'status err'; status.textContent = 'Escreva seu nome.'; return; }
+    if (zap.length < 10) { status.className = 'status err'; status.textContent = 'Informe o WhatsApp com DDD.'; return; }
+    status.className = 'status ok';
+    status.textContent = 'Protótipo: o formulário ainda não está ligado a nada. Nenhum dado foi enviado.';
+  });
+})();
+</script>
+
+</body></html>
