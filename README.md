@@ -5,12 +5,17 @@ Protótipo estático do site dos Naucoólicos, torcida do Náutico. Esta versão
 ## Conteúdo atual
 
 - Apresentação da torcida, história, identidade e escudo.
-- Fotos da arquibancada e artes da torcida.
+- Fotos da arquibancada e dos encontros da torcida.
 - Próximos jogos cadastrados diretamente no HTML.
-- Prévia de produtos da torcida, marcados como “Em breve”.
-- Link para o Instagram e formulário de interesse.
+- Apresentação inicial dos planos Individual e Família, sem valores definidos.
+- Prévia de produtos e espaço para notícias, ainda sem catálogo ou matérias reais.
+- Link para o Instagram oficial e aviso de que um canal direto de contato será disponibilizado em breve.
+- Header branco fixo, faixa de frases entre a história e a logo, mosaico de fotos clicáveis e entrada suave dos elementos uma vez; o movimento é reduzido conforme a preferência do navegador.
+- Logo e mascote v2 na página, ícone v2 na aba e versão da logo com fundo na prévia de compartilhamento.
 
-O formulário **não envia nem armazena dados**: após a validação, ele informa que esta é uma demonstração. Os jogos também são dados fixos; o JavaScript oculta partidas cuja data final já passou. Antes de cada apresentação, confira se a agenda ainda está correta.
+O contato direto ainda não está ativo: por enquanto, a página aponta para o Instagram oficial e informa que um canal será anunciado em breve. Quando a torcida definir se usará WhatsApp, e-mail ou outro destino, o formulário poderá ser integrado. Os planos **não têm cadastro ou pagamento ativo**. Os jogos também são dados fixos; o JavaScript oculta partidas cuja data final já passou. Antes de cada apresentação, confira se a agenda ainda está correta.
+
+O texto de história foi escrito a partir do contexto inicial fornecido pela torcida e precisa de validação antes de ser tratado como texto oficial. Também faltam confirmação dos valores e benefícios dos planos, fotos e preços dos produtos, notícias reais e número do WhatsApp oficial.
 
 ## Estrutura
 
@@ -28,7 +33,7 @@ Não há dependências, instalação ou etapa de compilação. Para visualizar l
 3. Selecione **Other** em **Framework Preset**.
 4. Deixe o **Build Command** vazio e use `.` como **Output Directory**.
 
-A Vercel servirá o `index.html` e a pasta `img/` diretamente. O formulário continuará demonstrativo nessa publicação.
+A Vercel servirá o `index.html` e a pasta `img/` diretamente. O contato direto ainda não está ativo nesta versão.
 
 ## Próxima etapa
 

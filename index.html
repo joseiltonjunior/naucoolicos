@@ -1,17 +1,17 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
-<title>Naucoólicos - a torcida do Náutico</title>
-<meta name="description" content="Naucoólicos, a torcida do Náutico. História, fotos, jogos e muito amor pelo Timbu.">
-<link rel="icon" type="image/x-icon" href="/img/mascote.ico">
+<title>Naucoólicos | A torcida do Náutico desde 2005</title>
+<meta name="description" content="Desde 2005, amizade e paixão pelo Náutico nos unem na arquibancada. Conheça a história dos Naucoólicos, veja fotos e acompanhe os jogos do Timbu.">
+<link rel="icon" type="image/x-icon" href="img/logo-v2.ico">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Naucoólicos">
-<meta property="og:title" content="Naucoólicos - a torcida do Náutico">
-<meta property="og:description" content="Naucoólicos, a torcida do Náutico. História, fotos, jogos e muito amor pelo Timbu.">
+<meta property="og:title" content="Naucoólicos | A torcida do Náutico desde 2005">
+<meta property="og:description" content="Desde 2005, amizade e paixão pelo Náutico nos unem na arquibancada. Conheça a história dos Naucoólicos, veja fotos e acompanhe os jogos do Timbu.">
 <meta property="og:url" content="https://naucoolicos.vercel.app/">
-<meta property="og:image" content="https://naucoolicos.vercel.app/img/naucoolicos-share.png">
+<meta property="og:image" content="https://naucoolicos.vercel.app/img/logo-com-fundo-v2.png">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="500">
-<meta property="og:image:height" content="500">
+<meta property="og:image:width" content="1254">
+<meta property="og:image:height" content="1254">
 <meta property="og:image:alt" content="Escudo vermelho dos Naucoólicos">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,6 @@
   --flare: #c8141f;
   --flare-hi: #e3262f;
   --wine: #7a0f1c;
-  --title: #8f1829;
   --wine-deep: #5a0914;
   --font-display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
   --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -53,7 +52,7 @@ body {
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 h1, h2, h3, p, ul { margin: 0; }
-h1, h2, h3 { color: var(--title); }
+h1, h2, h3 { color: var(--wine); }
 ul { padding: 0; list-style: none; }
 section[id], .sub[id] { scroll-margin-top: 92px; }
 
@@ -70,22 +69,24 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
   transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 .btn--solid { background: var(--flare); color: #fff; }
-.btn--solid:hover { background: var(--wine); border-color: var(--wine); }
-.btn--ghost { background: rgba(255, 255, 255, .7); color: var(--ink); border-color: var(--ink); }
-.btn--ghost:hover { background: var(--ink); color: #fff; }
+.btn--solid:hover { background: transparent; color: var(--wine); border-color: var(--wine); }
+.btn--wine { background: var(--wine); border-color: var(--wine); color: #fff; }
+.btn--wine:hover { background: transparent; color: var(--wine); border-color: var(--wine); }
+.btn--ghost { background: transparent; color: var(--wine); border-color: var(--wine); }
+.btn--ghost:hover { background: var(--wine); color: #fff; }
 .btn:active { transform: translateY(1px); }
 
 /* ---------- cabeçalho ---------- */
 .top {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px);
+  background: #fff;
   border-bottom: 1px solid var(--line);
 }
 .top__in { display: flex; align-items: center; gap: 1.25rem; min-height: 76px; flex-wrap: wrap; padding-block: .5rem; }
 .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; margin-right: auto; }
 .brand img { height: 52px; width: auto; }
 .brand__t { display: flex; flex-direction: column; line-height: 1.05; }
-.brand__t b { font: 400 1.55rem/1 var(--font-display); letter-spacing: .04em; text-transform: uppercase; color: var(--flare); }
+.brand__t b { font: 400 1.55rem/1 var(--font-display); letter-spacing: .04em; text-transform: uppercase; color: var(--wine); }
 .brand__t small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: .3rem; }
 .nav { display: flex; gap: 1.3rem; }
 .nav a {
@@ -95,6 +96,8 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 .nav a:hover { color: var(--ink); }
 .nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--flare); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
 .nav a:hover::after { transform: scaleX(1); }
+.nav a.nav__cta { color: #fff; }
+.nav a.nav__cta:hover { color: var(--wine); }
 .nav__cta { display: none; }
 .menu-btn {
   display: none; align-items: center; min-height: 44px; padding: 0 1rem;
@@ -119,13 +122,17 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
   font: 400 clamp(3rem, 8.2vw, 6.6rem)/.96 var(--font-display); text-transform: uppercase; letter-spacing: .005em; text-wrap: balance;
 }
 .hero h1 span { display: block; }
-.hero h1 em { display: block; font-style: normal; color: var(--flare); background: linear-gradient(180deg, #e3262f 10%, #a30e18 95%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero h1 em { display: block; font-style: normal; }
 .lede { margin-top: 1.4rem; max-width: 30ch; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink); }
-.cta-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
 .hero__art { position: relative; margin: 0; display: grid; place-items: center; }
 .hero__art::before { content: ''; position: absolute; inset: 8% 4% 2%; z-index: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(200, 20, 31, .38), rgba(200, 20, 31, 0) 100%); }
 .hero__art img { position: relative; z-index: 1; width: auto; height: auto; max-width: 100%; max-height: min(560px, 62vh); filter: drop-shadow(0 22px 24px rgba(90, 9, 20, .35)); }
 .hero + .wrap { padding-bottom: clamp(2rem, 4vw, 3rem); }
+.motion-ready .hero__copy > * { animation: rise-in .65s both; }
+.motion-ready .hero__copy > :nth-child(2) { animation-delay: .1s; }
+.motion-ready .hero__copy > :nth-child(3) { animation-delay: .2s; }
+.motion-ready .hero__art { animation: rise-in .85s .2s both; }
+@keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ---------- próximo jogo ---------- */
 .next {
@@ -146,7 +153,15 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 .meta span { white-space: nowrap; }
 .next .meta { color: rgba(255, 255, 255, .85); }
 .next .btn--solid { background: #fff; color: var(--wine); border-color: #fff; }
-.next .btn--solid:hover { background: var(--paper-3); border-color: var(--paper-3); }
+.next .btn--solid:hover { background: transparent; color: #fff; border-color: #fff; }
+
+/* faixa de identidade */
+.pride-strip { overflow: hidden; padding-block: .9rem; background: var(--wine); color: #fff; }
+.pride-strip__track { display: flex; width: max-content; animation: pride-scroll 28s linear infinite; }
+.pride-strip__group { display: flex; flex: none; align-items: center; gap: 2.2rem; padding-right: 2.2rem; white-space: nowrap; font: 400 clamp(1rem, 2vw, 1.4rem)/1 var(--font-display); letter-spacing: .1em; }
+.pride-strip__group span:nth-child(even) { font-size: .65em; opacity: .65; }
+.pride-strip:hover .pride-strip__track { animation-play-state: paused; }
+@keyframes pride-scroll { to { transform: translateX(-50%); } }
 
 /* ---------- seções ---------- */
 .sec { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
@@ -157,33 +172,37 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 
 /* história */
 .hist { background: var(--paper-2); }
-.hist__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(1.2rem, 3vw, 3rem); align-items: center; }
+.hist__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 4vw, 4rem); align-items: center; }
 .hist h2 { margin-top: 1rem; font: 400 clamp(3.4rem, 8vw, 6rem)/.9 var(--font-display); text-transform: uppercase; }
-.hist h2 em { display: block; font-style: normal; color: var(--flare); background: linear-gradient(180deg, #e3262f 10%, #a30e18 95%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.hist__b { display: grid; gap: 1.4rem; justify-items: start; }
-.hist__b p { max-width: 46ch; font-size: 1.12rem; }
-.values { display: flex; flex-wrap: wrap; gap: .5rem; }
-.values li { padding: .35rem .8rem; font: 400 .95rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--wine); background: #fff; border: 1px solid var(--line); border-radius: 999px; }
+.hist h2 em { display: block; font-style: normal; }
+.hist__copy { display: grid; gap: 1.4rem; justify-items: start; }
+.hist__copy h2 { margin: 0; }
+.hist__copy p:not(.eyebrow) { max-width: 48ch; font-size: 1.12rem; }
+.hist__art .sub { margin: 0 0 1rem; }
+.hist__art-grid { display: grid; grid-template-columns: 1.15fr .85fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: .7rem; height: clamp(340px, 42vw, 510px); }
+.hist__art-grid .gal__i { height: 100%; aspect-ratio: auto; }
+.hist__art-grid .gal__i:first-child { grid-row: span 2; }
+.hist__art-grid .gal__i span { font-size: clamp(.85rem, 1.5vw, 1.15rem); }
 
 /* nossa logo */
 .logo-sec { position: relative; isolation: isolate; overflow: hidden; }
 .logo-sec::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 45% 60% at 24% 45%, rgba(200, 20, 31, .13), transparent 70%); }
 .logo__in { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
 .logo-sec h2 { margin: 1rem 0 1.6rem; font: 400 clamp(2.6rem, 6vw, 4.4rem)/.95 var(--font-display); text-transform: uppercase; }
-.crest { position: relative; width: 100%; max-width: 520px; aspect-ratio: 449 / 413; margin-inline: auto; }
+.crest { position: relative; width: 100%; max-width: 520px; aspect-ratio: 1312 / 1199; margin-inline: auto; }
 .crest > img { width: 100%; height: 100%; filter: drop-shadow(0 22px 22px rgba(90, 9, 20, .3)); }
 .zone { position: absolute; transform: translate(-50%, -50%); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 0 0 2px rgba(42, 10, 15, .5), 0 0 28px rgba(255, 255, 255, .7); opacity: 0; transition: opacity .2s ease; pointer-events: none; }
 .zone.on { opacity: 1; }
 .zone--shield { border-radius: 9% 9% 50% 50% / 8% 8% 42% 42%; }
 .parts { display: grid; gap: .55rem; }
 .part { display: grid; gap: .3rem; width: 100%; padding: .9rem 1.1rem; text-align: left; color: var(--ink); background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 8px; cursor: pointer; font: inherit; transition: background-color .15s ease, border-color .15s ease; }
-.part b { color: var(--title); font: 400 1.25rem/1 var(--font-display); letter-spacing: .05em; text-transform: uppercase; }
+.part b { color: var(--wine); font: 400 1.25rem/1 var(--font-display); letter-spacing: .05em; text-transform: uppercase; }
 .part span { color: var(--ink-soft); font-size: .98rem; line-height: 1.45; }
 .part:hover { border-color: rgba(200, 20, 31, .5); }
 .part.on { background: rgba(200, 20, 31, .07); border-color: rgba(200, 20, 31, .45); border-left-color: var(--flare); }
 .part.on span { color: var(--ink); }
 .pride { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1rem clamp(1.5rem, 4vw, 4rem); margin-top: clamp(2rem, 5vw, 3.2rem); padding-top: clamp(1.6rem, 4vw, 2.4rem); border-top: 1px solid var(--line); align-items: start; }
-.pride h3 { font: 400 clamp(1.8rem, 3.6vw, 2.5rem)/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; color: var(--flare); }
+.pride h3 { font: 400 clamp(1.8rem, 3.6vw, 2.5rem)/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; color: var(--wine); }
 .pride p { max-width: 52ch; font-size: 1.1rem; }
 
 /* faixa dos Aflitos */
@@ -203,8 +222,7 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 .m-tall { grid-row: span 2; }
 .sub { margin: 2.6rem 0 1rem; font: 400 1.25rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--wine); }
 
-/* galeria */
-.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+/* imagens ampliáveis */
 .gal__i {
   position: relative; display: block; padding: 0; aspect-ratio: 4 / 5; overflow: hidden; cursor: zoom-in;
   background: var(--paper-3); border: 1px solid var(--line); border-radius: 10px; color: #fff; text-align: left;
@@ -227,11 +245,11 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 .cal__r { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: center; gap: .6rem 1.4rem; padding: .8rem 1.2rem .8rem .8rem; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
 .cal__r.is-next { border-color: var(--flare); box-shadow: 0 0 0 1px var(--flare); }
 .cal__d { display: grid; justify-items: center; padding-block: .3rem; line-height: 1; }
-.cal__d b { color: var(--title); font: 400 2.1rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.cal__d b { color: var(--wine); font: 400 2.1rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
 .cal__d span { margin-top: .25rem; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--flare); }
 .cal__d small { margin-top: .2rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
 .cal__t h3 { font: 400 clamp(1.25rem, 2.6vw, 1.7rem)/1.1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
-.cal__t .me { color: var(--flare); }
+.cal__t .me { color: inherit; }
 .cal__tag { display: none; margin-bottom: .35rem; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--flare); }
 .is-next .cal__tag { display: block; }
 .cal__m { display: grid; justify-items: end; gap: .35rem; }
@@ -247,34 +265,61 @@ section[id], .sub[id] { scroll-margin-top: 92px; }
 .car__nav button { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
 .car__nav button:hover:not(:disabled) { color: #fff; background: var(--flare); border-color: var(--flare); }
 .car__nav button:disabled { opacity: .35; cursor: default; }
-.car { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .9rem; scrollbar-width: thin; scrollbar-color: var(--flare) var(--paper-3); }
+.car { display: flex; gap: 1rem; min-height: 410px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; padding-bottom: .9rem; scrollbar-width: thin; scrollbar-color: var(--flare) var(--paper-3); }
 .prod { flex: 0 0 min(78%, 250px); scroll-snap-align: start; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
-.prod__img { display: grid; place-items: center; aspect-ratio: 1; background: linear-gradient(160deg, var(--paper-2), var(--paper-3)); }
-.prod__img svg { width: 58%; height: auto; }
+.prod__img { display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; background: linear-gradient(160deg, var(--paper-2), var(--paper-3)); }
+.prod__img img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .prod__b { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .9rem 1rem; }
 .prod__b h3 { font: 400 1.25rem/1 var(--font-display); text-transform: uppercase; letter-spacing: .04em; }
+.shop__h h2 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.prod { box-shadow: 0 16px 35px -30px rgba(90, 9, 20, .6); transition: transform .2s ease, box-shadow .2s ease; }
+.prod:hover { transform: translateY(-4px); box-shadow: 0 22px 38px -28px rgba(90, 9, 20, .5); }
+.prod__img { background: linear-gradient(150deg, #fff 0%, var(--paper-2) 55%, #ebcacb 100%); }
+
+/* planos de sócio em apresentação */
+.members { background: linear-gradient(180deg, #fff, var(--paper-2)); }
+.members__intro { max-width: 720px; margin-bottom: 2rem; }
+.members__intro h2 { margin-top: .8rem; font: 400 clamp(2.5rem, 5.8vw, 4.6rem)/.96 var(--font-display); text-transform: uppercase; }
+.members__intro > p:last-child { margin-top: 1rem; color: var(--ink-soft); font-size: 1.05rem; }
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.plan { display: flex; flex-direction: column; min-height: 290px; padding: clamp(1.5rem, 3vw, 2.2rem); background: #fff; border: 1px solid var(--line); border-top: 5px solid var(--wine); border-radius: 12px; box-shadow: 0 20px 45px -38px rgba(90, 9, 20, .55); }
+.plan__number { color: var(--wine); font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.plan h3 { margin-top: 1.5rem; font: 400 clamp(1.7rem, 3.2vw, 2.3rem)/1.05 var(--font-display); text-transform: uppercase; }
+.plan > p { max-width: 37ch; margin-top: .8rem; color: var(--ink-soft); }
+.plan__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.2rem; margin-top: auto; padding-top: 1.7rem; font-size: .82rem; border-top: 1px solid var(--line); }
+.plan__bottom strong { color: var(--wine); text-transform: uppercase; letter-spacing: .08em; }
+.plan--family { background: var(--wine); color: #fff; border-top-color: var(--wine-deep); }
+.plan--family h3, .plan--family .plan__number, .plan--family .plan__bottom strong { color: #fff; }
+.plan--family > p { color: rgba(255, 255, 255, .82); }
+.plan--family .plan__bottom { border-top-color: rgba(255, 255, 255, .3); }
+.members__note { margin-top: 1rem; color: var(--ink-soft); font-size: .82rem; }
+
+/* notícias em preparação */
+.news { color: #fff; background: var(--wine-deep); }
+.news .eyebrow { color: #ffbfc3; }
+.news .eyebrow::after { background: #ffbfc3; }
+.news h2, .news h3 { color: #fff; }
+.news__intro { max-width: 780px; margin-bottom: 2rem; }
+.news__intro h2 { margin-top: .7rem; font: 400 clamp(2.5rem, 5vw, 4rem)/1 var(--font-display); text-transform: uppercase; }
+.news__intro > p:last-child { margin-top: .9rem; color: rgba(255, 255, 255, .8); }
+.news__grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 1rem; }
+.news__image { position: relative; min-height: 360px; overflow: hidden; border-radius: 12px; }
+.news__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.news__topics { display: grid; grid-template-rows: repeat(2, 1fr) auto; gap: 1rem; }
+.news__card { display: flex; flex-direction: column; justify-content: center; padding: 1.4rem; border: 1px solid rgba(255, 255, 255, .22); border-radius: 12px; background: rgba(255, 255, 255, .07); }
+.news__card span { color: #ffbfc3; font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.news__card h3 { margin-top: .5rem; font: 400 1.7rem/1 var(--font-display); text-transform: uppercase; }
+.news__card p { margin-top: .6rem; color: rgba(255, 255, 255, .8); font-size: .9rem; }
+.news__topics .soon { justify-self: start; color: #fff; background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .35); }
 
 /* contato */
 .join { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 2rem clamp(1.5rem, 5vw, 4rem); align-items: start; }
 .join h2 { font: 400 clamp(2.2rem, 5vw, 3.6rem)/.95 var(--font-display); text-transform: uppercase; }
 .join > div > p { margin-top: 1rem; max-width: 38ch; color: var(--ink-soft); }
-.redes { display: grid; gap: .5rem; margin-top: 1.6rem; font-size: .9rem; }
-.redes li { display: flex; justify-content: space-between; gap: 1rem; max-width: 320px; padding-block: .5rem; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
-.redes a { color: var(--flare); font-weight: 700; text-decoration: none; }
-.redes a:hover { text-decoration: underline; }
-.redes b { color: var(--ink); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .8rem; }
-form { display: grid; gap: 1rem; padding: clamp(1.2rem, 3vw, 2rem); background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 40px -30px rgba(90, 9, 20, .5); }
-.f2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-label { display: grid; gap: .4rem; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
-input, select {
-  width: 100%; min-height: 48px; padding: .6rem .9rem; font: 500 1rem var(--font-body); color: var(--ink);
-  background: var(--paper-2); border: 1px solid rgba(42, 10, 15, .3); border-radius: 6px;
-}
-input::placeholder { color: #8f747a; }
-input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(--flare); outline-offset: 1px; background: #fff; }
-.status { min-height: 1.4em; font-size: .9rem; color: var(--ink-soft); }
-.status.ok { color: var(--wine); font-weight: 600; }
-.status.err { color: var(--flare); font-weight: 600; }
+.join__cta { margin-top: 1.4rem; }
+.contact-soon { display: grid; align-content: center; justify-items: start; gap: .9rem; min-height: 250px; padding: clamp(1.4rem, 3vw, 2rem); background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 40px -30px rgba(90, 9, 20, .5); }
+.contact-soon h3 { font: 400 clamp(1.6rem, 3vw, 2.2rem)/1.05 var(--font-display); text-transform: uppercase; }
+.contact-soon p { max-width: 42ch; margin-top: 0; color: var(--ink-soft); }
 
 /* rodapé */
 
@@ -292,8 +337,10 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
 .foot__bar { border-top: 1px solid var(--line); background: var(--paper-2); }
 .foot__bar-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; padding-block: 1rem; }
 .foot__bar small { color: var(--ink-soft); font-size: .8rem; }
-.foot__bar a { color: var(--flare); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
-.foot__bar a:hover { text-decoration: underline; }
+.foot__credit { color: var(--ink-soft); font-size: .8rem; }
+.foot__credit a { color: inherit; text-decoration: none; }
+.foot__credit a:hover { text-decoration: underline; }
+.foot__credit strong { color: var(--wine); }
 
 /* lightbox */
 .lb { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; gap: .8rem; padding: 1.2rem; background: rgba(58, 6, 14, .95); }
@@ -301,6 +348,13 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
 .lb img { max-height: 82vh; max-width: min(92vw, 900px); width: auto; height: auto; border-radius: 8px; margin-inline: auto; }
 .lb p { text-align: center; color: rgba(255, 255, 255, .85); font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
 .lb__x { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 12px); right: 12px; width: 48px; height: 48px; font-size: 1.8rem; line-height: 1; color: #fff; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .3); border-radius: 50%; cursor: pointer; }
+
+/* entrada suave uma vez, com conteúdo visível se o JavaScript não carregar */
+.motion-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.motion-ready .reveal:nth-child(2) { transition-delay: .08s; }
+.motion-ready .reveal:nth-child(3) { transition-delay: .16s; }
+.motion-ready .prod.reveal.is-visible:hover { transform: translateY(-4px); }
 
 /* ---------- responsivo ---------- */
 @media (max-width: 1100px) {
@@ -310,30 +364,34 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   .nav.open { display: flex; }
   .nav a { padding: .9rem 0; border-top: 1px solid var(--line); }
   .nav a::after { display: none; }
-  .nav__cta { display: inline-flex; margin-top: .6rem; border-top: 0 !important; color: #fff !important; padding: .7rem 1.4rem !important; }
+  .nav__cta { display: inline-flex; margin-top: .6rem; border-top: 0 !important; padding: .7rem 1.4rem !important; }
 }
 @media (max-width: 860px) {
   .hero__in { grid-template-columns: minmax(0, 1fr); }
   .hero__art { max-width: 560px; margin-inline: auto; margin-top: -.5rem; }
   .next { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; }
   .next__match { justify-content: center; }
-  .join, .logo__in, .pride, .foot__top { grid-template-columns: minmax(0, 1fr); }
+  .hist__in, .join, .logo__in, .pride, .foot__top { grid-template-columns: minmax(0, 1fr); }
+  .hist__art-grid { height: clamp(340px, 62vw, 540px); }
 }
 @media (max-width: 720px) {
   .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
+  .plans, .news__grid { grid-template-columns: minmax(0, 1fr); }
+  .news__image { min-height: 280px; }
 }
 @media (max-width: 640px) {
-  .hist__in { grid-template-columns: minmax(0, 1fr); }
   .cal__r { grid-template-columns: 60px minmax(0, 1fr); }
   .cal__d b { font-size: 1.7rem; }
   .cal__m { grid-column: 2; grid-auto-flow: column; justify-content: start; justify-items: start; align-items: center; gap: .8rem; }
   .f2 { grid-template-columns: minmax(0, 1fr); }
   .brand__t b { font-size: 1.3rem; }
   .brand img { height: 44px; width: auto; }
+  .pride-strip__group { gap: 1.2rem; padding-right: 1.2rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .pride-strip__group + .pride-strip__group { display: none; }
 }
 </style>
 
@@ -341,21 +399,20 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="#inicio" aria-label="Naucoólicos, início">
-      <img src="img/logo-transparente.png" alt="" width="449" height="413">
+      <img src="img/logo-v2.png" alt="" width="1312" height="1199">
       <span class="brand__t"><b>Naucoólicos</b><small>Um brinde ao Náutico</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#inicio">Início</a>
-      <a href="#historia">História</a>
-      <a href="#logo">Logo</a>
+      <a href="#historia">Quem somos</a>
       <a href="#galeria">Galeria</a>
       <a href="#jogos">Jogos</a>
+      <a href="#noticias">Notícias</a>
       <a href="#loja">Loja</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn--solid nav__cta" href="#contato">Seja Naucoólico</a>
+      <a class="btn btn--solid btn--wine nav__cta" href="#socios">Seja sócio</a>
     </nav>
-    <a class="btn btn--solid top__cta" href="#contato">Seja Naucoólico</a>
+    <a class="btn btn--solid btn--wine top__cta" href="#socios">Seja sócio</a>
   </div>
 </header>
 
@@ -367,13 +424,9 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
         <p class="eyebrow">Torcida do Náutico</p>
         <h1><span>A torcida que</span><em>carrega o Timbu</em><span>no peito.</span></h1>
         <p class="lede">Paixão, arquibancada, identidade e tradição em vermelho e branco.</p>
-        <div class="cta-row">
-          <a class="btn btn--solid" href="#historia">Conheça a torcida</a>
-          <a class="btn btn--ghost" href="#jogos">Ver próximo jogo</a>
-        </div>
       </div>
       <figure class="hero__art">
-        <img src="img/mascote.webp" alt="Mascote dos Naucoólicos: um rato cinza de olhos vermelhos, dentes à mostra e camisa 05, com uma garrafa em uma mão e uma bola de couro na outra" width="720" height="900">
+        <img src="img/mascote-sem-fundo-v2.png" alt="Mascote dos Naucoólicos: um rato cinza de olhos vermelhos, dentes à mostra e camisa 05, com uma garrafa em uma mão e uma bola de couro na outra" width="1145" height="1374">
       </figure>
     </div>
   </section>
@@ -394,25 +447,45 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
 
   <section class="sec hist" id="historia">
     <div class="wrap hist__in">
-      <div>
+      <div class="hist__copy">
         <p class="eyebrow">Raízes que nos unem</p>
         <h2>Nossa<em>história</em></h2>
-      </div>
-      <div class="hist__b">
-        <p>O Naucoólicos nasceu da paixão pelo Náutico e da união de uma torcida que vive o clube de forma intensa, verdadeira e incondicional. Mais que uma torcida, somos uma família que carrega o Timbu no peito, dentro e fora dos estádios.</p>
-        <ul class="values" aria-label="Valores da torcida">
-          <li>Tradição</li><li>Respeito</li><li>Arquibancada</li><li>Identidade</li><li>Sempre</li>
-        </ul>
+        <p>Os Naucoólicos surgiram em 2005, entre torcedores com raízes na Fanáutico que queriam continuar juntos na arquibancada em uma nova fase da vida. O trabalho e a família mudaram a rotina, mas não a vontade de acompanhar o Timbu, encontrar os amigos e brindar a cada jogo.</p>
+        <p>Da velha guarda à nova geração, seguimos escrevendo essa história nos Aflitos e levando nossa união também para o digital. A forma de torcer ficou mais tranquila; a paixão pelo Náutico continua inteira.</p>
         <a class="btn btn--ghost" href="#contato">Faça parte</a>
+      </div>
+      <div class="hist__art">
+        <h3 class="sub" id="fotos">Fotos da torcida</h3>
+        <div class="hist__art-grid">
+          <button class="gal__i" type="button" data-src="img/torcida.jpg" data-cap="Naucoólicos no estádio">
+            <img src="img/torcida.jpg" alt="Integrantes dos Naucoólicos segurando a bandeira da torcida diante do gramado" loading="lazy">
+            <span>Naucoólicos no estádio</span>
+          </button>
+          <button class="gal__i" type="button" data-src="img/torcida2.jpg" data-cap="Torcida reunida na arquibancada">
+            <img src="img/torcida2.jpg" alt="Torcida reunida na arquibancada com bandeiras e camisas dos Naucoólicos" loading="lazy">
+            <span>Torcida reunida</span>
+          </button>
+          <button class="gal__i" type="button" data-src="img/torcida3.webp" data-cap="Faixa dos Naucoólicos na praia">
+            <img src="img/torcida3.webp" alt="Integrantes dos Naucoólicos exibindo uma faixa da torcida na praia" loading="lazy">
+            <span>Encontro na praia</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="pride-strip" role="note" aria-label="Um brinde ao Náutico, amizade na arquibancada e Timbu no peito">
+    <div class="pride-strip__track" aria-hidden="true">
+      <div class="pride-strip__group"><span>UM BRINDE AO NÁUTICO</span><span>◆</span><span>AMIZADE NA ARQUIBANCADA</span><span>◆</span><span>TIMBU NO PEITO</span><span>◆</span></div>
+      <div class="pride-strip__group"><span>UM BRINDE AO NÁUTICO</span><span>◆</span><span>AMIZADE NA ARQUIBANCADA</span><span>◆</span><span>TIMBU NO PEITO</span><span>◆</span></div>
+    </div>
+  </div>
 
   <section class="sec logo-sec" id="logo">
     <div class="wrap">
       <div class="logo__in">
         <div class="crest">
-          <img src="img/logo-transparente.png" alt="Escudo dos Naucoólicos: bola antiga, caneca de chopp, a palavra Naucoólicos, remos cruzados com as letras C N C e uma folha de ramos de cada lado" width="449" height="413">
+          <img src="img/logo-v2.png" alt="Escudo dos Naucoólicos: bola antiga, caneca de chopp, a palavra Naucoólicos, remos cruzados com as letras C N C e uma folha de ramos de cada lado" width="1312" height="1199">
           <span class="zone on" data-for="bola" style="left:36.2%;top:29.1%;width:22%;height:24%"></span>
           <span class="zone" data-for="caneca" style="left:64.6%;top:28.5%;width:18%;height:25%"></span>
           <span class="zone" data-for="folhas" style="left:12.5%;top:54%;width:21%;height:78%"></span>
@@ -442,7 +515,7 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   </section>
 
   <section class="band" id="aflitos" aria-label="Estádio dos Aflitos">
-    <img src="img/foto-aflitos.jpg" alt="Arquibancada vermelha e branca dos Aflitos com a palavra NÁUTICO e o ano 1901, vista do gramado sob céu azul" width="1080" height="863" loading="lazy">
+    <img src="img/caldeirao.jpg" alt="Arquibancadas lotadas por torcedores do Náutico, com bandeiras levantadas durante um jogo à noite" width="1200" height="800" loading="lazy">
     <div class="band__in wrap">
       <p class="eyebrow">Estádio Eládio de Barros Carvalho</p>
       <h2>O caldeirão<br>dos Aflitos</h2>
@@ -451,7 +524,7 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
 
   <section class="sec" id="galeria">
     <div class="wrap">
-      <div class="sec-h"><h2>Galeria da arquibancada</h2><p>Fotos e artes da torcida. Toque para ampliar.</p></div>
+      <div class="sec-h"><h2>Galeria da arquibancada</h2><p>Fotos da torcida. Toque para ampliar.</p></div>
       <div class="mosaic">
         <button class="gal__i m-big" type="button" data-src="img/foto-fumaca.jpg" data-cap="Fumaça e bandeiras">
           <img src="img/foto-fumaca.jpg" alt="Torcida de braços para o alto sob fumaça branca, com bandeiras vermelhas e brancas e um grande mosaico ao fundo" loading="lazy">
@@ -468,21 +541,6 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
         <button class="gal__i" type="button" data-src="img/foto-bandeiras.jpg" data-cap="Mar de bandeiras">
           <img src="img/foto-bandeiras.jpg" alt="Torcida agitando bandeiras vermelhas e brancas no alambrado ao fim da tarde" loading="lazy">
           <span>Mar de bandeiras</span>
-        </button>
-      </div>
-      <h3 class="sub" id="artes">Artes da torcida</h3>
-      <div class="gal">
-        <button class="gal__i" type="button" data-src="img/poster-londrina.jpg" data-cap="Dia de Timbu">
-          <img src="img/poster-londrina.jpg" alt="Cartaz Dia de Timbu: o mascote agachado, com o jogo contra o Londrina nos Aflitos" loading="lazy">
-          <span>Dia de Timbu<small>Náutico x Londrina</small></span>
-        </button>
-        <button class="gal__i" type="button" data-src="img/poster-vilanova.jpg" data-cap="Avante Timbu">
-          <img src="img/poster-vilanova.jpg" alt="Cartaz Avante Timbu: o mascote com uma garrafa e uma bola de couro em um estádio ao entardecer" loading="lazy">
-          <span>Avante Timbu<small>Vila Nova x Náutico</small></span>
-        </button>
-        <button class="gal__i" type="button" data-src="img/poster-criciuma.jpg" data-cap="Hoje tem Náutico">
-          <img src="img/poster-criciuma.jpg" alt="Cartaz Hoje tem Náutico: o mascote diante do escudo dos Naucoólicos, com o jogo contra o Criciúma" loading="lazy">
-          <span>Hoje tem Náutico<small>Náutico x Criciúma</small></span>
         </button>
       </div>
     </div>
@@ -531,13 +589,38 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
     </div>
   </section>
 
+  <section class="sec members" id="socios">
+    <div class="wrap">
+      <div class="members__intro">
+        <p class="eyebrow">A torcida segue junto</p>
+        <h2>Seja sócio dos Naucoólicos</h2>
+        <p>Estamos desenhando formas de participação para quem vive o Náutico com a gente. Estes planos mostram a ideia inicial; valores e benefícios ainda serão definidos pela torcida.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <span class="plan__number">01 / Individual</span>
+          <h3>Seu lugar na arquibancada</h3>
+          <p>Para quem quer estar perto da torcida, dos jogos e dos encontros.</p>
+          <div class="plan__bottom"><span>Benefícios em definição</span><strong>Valor a confirmar</strong></div>
+        </article>
+        <article class="plan plan--family">
+          <span class="plan__number">02 / Família</span>
+          <h3>Paixão que passa de geração</h3>
+          <p>Uma proposta para viver a torcida em família e seguir essa história juntos.</p>
+          <div class="plan__bottom"><span>Benefícios em definição</span><strong>Valor a confirmar</strong></div>
+        </article>
+      </div>
+      <p class="members__note">Apresentação dos planos: não há cadastro ou pagamento ativo nesta versão.</p>
+    </div>
+  </section>
+
   <section class="sec" id="loja">
     <div class="wrap">
       <div class="shop__h">
         <div>
-          <p class="eyebrow">Em breve</p>
-          <h2>Coleção Naucoólicos</h2>
-          <p>Produtos da torcida que respira Náutico. A loja entra na segunda etapa do site.</p>
+          <p class="eyebrow">Coleção em construção</p>
+          <h2>A torcida também se veste</h2>
+          <p>Prévia das peças pensadas para a coleção Naucoólicos. Preços e disponibilidade em breve.</p>
         </div>
         <div class="car__nav">
           <button id="carPrev" type="button" aria-label="Produtos anteriores" disabled><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -546,25 +629,47 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
       </div>
       <div class="car" id="car" role="region" aria-roledescription="carrossel" aria-label="Produtos da coleção" tabindex="0">
         <article class="prod">
-          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="cj"><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z"/></clipPath></defs><g clip-path="url(#cj)"><rect x="0" y="0" width="120" height="120" fill="#ffffff"/><rect x="8" y="0" width="8" height="120" fill="#c8141f"/><rect x="24" y="0" width="8" height="120" fill="#c8141f"/><rect x="40" y="0" width="8" height="120" fill="#c8141f"/><rect x="56" y="0" width="8" height="120" fill="#c8141f"/><rect x="72" y="0" width="8" height="120" fill="#c8141f"/><rect x="88" y="0" width="8" height="120" fill="#c8141f"/><rect x="104" y="0" width="8" height="120" fill="#c8141f"/></g><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
-          <div class="prod__b"><h3>Camisa</h3><span class="pill">Em breve</span></div>
+          <div class="prod__img"><img src="img/camisa1.webp" alt="Prévia da camisa 1 dos Naucoólicos" loading="lazy"></div>
+          <div class="prod__b"><h3>Camisa 1</h3><span class="pill">Em breve</span></div>
         </article>
         <article class="prod">
-          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="34" y="14" width="52" height="26" rx="8" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 38 H60 V100 H38 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M62 38 H84 V84 H62 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 56 H60 M38 72 H60 M38 88 H60 M62 56 H84 M62 72 H84" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M42 100 V108 M48 100 V108 M54 100 V108 M66 84 V92 M72 84 V92 M78 84 V92" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-          <div class="prod__b"><h3>Cachecol</h3><span class="pill">Em breve</span></div>
+          <div class="prod__img"><img src="img/camisa2.webp" alt="Prévia da camisa 2 dos Naucoólicos" loading="lazy"></div>
+          <div class="prod__b"><h3>Camisa 2</h3><span class="pill">Em breve</span></div>
         </article>
         <article class="prod">
-          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M22 76 C22 42 42 26 62 26 C84 26 98 44 98 76 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 76 H100 C110 76 116 82 113 88 C112 90 108 90 104 90 H42 C30 90 22 84 22 76 Z" fill="#c8141f" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="62" cy="26" r="3.5" fill="#c8141f"/><path d="M62 28 C58 44 58 60 60 76" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <div class="prod__img"><img src="img/camisa3.webp" alt="Prévia da camisa 3 dos Naucoólicos" loading="lazy"></div>
+          <div class="prod__b"><h3>Camisa 3</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><img src="img/bermuda.webp" alt="Prévia da bermuda dos Naucoólicos" loading="lazy"></div>
+          <div class="prod__b"><h3>Bermuda</h3><span class="pill">Em breve</span></div>
+        </article>
+        <article class="prod">
+          <div class="prod__img"><img src="img/bone.webp" alt="Prévia do boné dos Naucoólicos" loading="lazy"></div>
           <div class="prod__b"><h3>Boné</h3><span class="pill">Em breve</span></div>
         </article>
         <article class="prod">
-          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 16 L20 26 L6 52 L24 62 L32 52 L32 104 L88 104 L88 52 L96 62 L114 52 L100 26 L80 16 C76 26 68 31 60 31 C52 31 44 26 40 16 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="60" cy="62" r="10" fill="#ffffff" stroke="#c8141f" stroke-width="2.5"/></svg></div>
-          <div class="prod__b"><h3>Camiseta</h3><span class="pill">Em breve</span></div>
+          <div class="prod__img"><img src="img/chaveiro.webp" alt="Prévia do chaveiro dos Naucoólicos" loading="lazy"></div>
+          <div class="prod__b"><h3>Chaveiro</h3><span class="pill">Em breve</span></div>
         </article>
-        <article class="prod">
-          <div class="prod__img"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M42 18 L20 28 L8 80 L26 84 L32 62 L32 106 L88 106 L88 62 L94 84 L112 80 L100 28 L78 18 C74 10 68 8 60 8 C52 8 46 10 42 18 Z" fill="#f6d6d6" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/><path d="M44 20 C48 36 72 36 76 20" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M52 36 V52 M68 36 V52" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linecap="round"/><path d="M42 82 H78 L82 100 H38 Z" fill="none" stroke="#c8141f" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
-          <div class="prod__b"><h3>Moletom</h3><span class="pill">Em breve</span></div>
-        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec news" id="noticias">
+    <div class="wrap">
+      <div class="news__intro">
+        <p class="eyebrow">A torcida em movimento</p>
+        <h2>Novidades da torcida</h2>
+        <p>Jogos, encontros, caravanas e ações dos Naucoólicos terão espaço aqui. As primeiras notícias serão publicadas quando o conteúdo da torcida estiver pronto.</p>
+      </div>
+      <div class="news__grid">
+        <div class="news__image"><img src="img/faixa.webp" alt="Faixa dos Naucoólicos estendida no estádio sob o céu alaranjado do pôr do sol" loading="lazy"></div>
+        <div class="news__topics">
+          <article class="news__card"><span>01 / Arquibancada</span><h3>Próximos encontros</h3><p>O espaço para combinar os dias de jogo e reunir a torcida.</p></article>
+          <article class="news__card"><span>02 / Nossa gente</span><h3>Histórias e ações</h3><p>Notícias da velha guarda, da nova geração e do que fazemos juntos.</p></article>
+          <span class="soon">Conteúdo em preparação</span>
+        </div>
       </div>
     </div>
   </section>
@@ -573,28 +678,15 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
     <div class="wrap join">
       <div>
         <p class="eyebrow">Arquibancada aberta</p>
-        <h2 style="margin-top:1rem">Seja<br>Naucoólico</h2>
-        <p>Deixe seu contato para saber de jogos, caravanas e ações da torcida.</p>
-        <ul class="redes" aria-label="Redes da torcida">
-          <li><b>Instagram</b><a href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener">@naucoolicosoficial</a></li>
-        </ul>
+        <h2 style="margin-top:1rem">Fale com<br>a torcida</h2>
+        <p>Enquanto preparamos um canal direto de contato, acompanhe as novidades e os encontros da torcida pelo Instagram oficial.</p>
+        <a class="btn btn--solid btn--wine join__cta" href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener noreferrer">Acompanhe no Instagram</a>
       </div>
-      <form id="joinForm" novalidate>
-        <div class="f2">
-          <label for="nome">Nome<input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required></label>
-          <label for="zap">WhatsApp<input id="zap" name="zap" type="tel" autocomplete="tel" inputmode="tel" placeholder="(81) 90000-0000" required></label>
-        </div>
-        <label for="interesse">Como quer participar
-          <select id="interesse" name="interesse">
-            <option>Ir aos jogos</option>
-            <option>Caravanas</option>
-            <option>Produtos da torcida</option>
-            <option>Outro</option>
-          </select>
-        </label>
-        <button class="btn btn--solid" type="submit">Quero entrar</button>
-        <p class="status" id="status" role="status" aria-live="polite"></p>
-      </form>
+      <div class="contact-soon">
+        <span class="pill">Em breve</span>
+        <h3>Contato direto com a torcida</h3>
+        <p>Estamos preparando uma forma simples de receber seu nome e interesse. Assim que o canal estiver pronto, avisaremos por aqui.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -603,11 +695,10 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   <div class="wrap foot__top">
     <div class="foot__brand">
       <a class="brand" href="#inicio" aria-label="Voltar ao início">
-        <img src="img/logo-transparente.png" alt="" width="449" height="413">
+        <img src="img/logo-v2.png" alt="" width="1312" height="1199">
         <span class="brand__t"><b>Naucoólicos</b><small>Um brinde ao Náutico</small></span>
       </a>
       <q>Sempre com o Timbu, sempre na arquibancada.</q>
-      <a class="btn btn--solid" href="https://www.instagram.com/naucoolicosoficial/" target="_blank" rel="noopener">Siga no Instagram</a>
     </div>
     <nav class="foot__cols" aria-label="Links do rodapé">
       <div>
@@ -615,7 +706,8 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
         <ul>
           <li><a href="#historia">Nossa história</a></li>
           <li><a href="#logo">Nossa logo</a></li>
-          <li><a href="#contato">Seja Naucoólico</a></li>
+          <li><a href="#socios">Seja sócio</a></li>
+          <li><a href="#noticias">Notícias</a></li>
         </ul>
       </div>
       <div>
@@ -629,7 +721,7 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
         <h3>Galeria</h3>
         <ul>
           <li><a href="#galeria">Fotos da arquibancada</a></li>
-          <li><a href="#artes">Artes da torcida</a></li>
+          <li><a href="#fotos">Fotos da torcida</a></li>
           <li><a href="#aflitos">O caldeirão dos Aflitos</a></li>
         </ul>
       </div>
@@ -652,7 +744,7 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   <div class="foot__bar">
     <div class="wrap foot__bar-in">
       <small>© 2026 Naucoólicos. Protótipo de site de torcida. Não é o site oficial do Clube Náutico Capibaribe.</small>
-      <a href="#inicio">Voltar ao topo</a>
+      <span class="foot__credit">Desenvolvido por <a href="https://www.instagram.com/dvlp.jr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Junior Ferreira"><strong>Junior Ferreira</strong></a></span>
     </div>
   </div>
 </footer>
@@ -673,7 +765,6 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   }
   btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-
 
   var parts = document.querySelectorAll('.part');
   var zones = document.querySelectorAll('.zone');
@@ -757,18 +848,23 @@ input:focus, select:focus { border-color: var(--flare); outline: 2px solid var(-
   lb.addEventListener('click', function (e) { if (e.target !== lbImg) closeLb(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
 
-  var form = document.getElementById('joinForm');
-  var status = document.getElementById('status');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var nome = document.getElementById('nome').value.trim();
-    var zap = document.getElementById('zap').value.replace(/\D/g, '');
-    status.className = 'status';
-    if (!nome) { status.className = 'status err'; status.textContent = 'Escreva seu nome.'; return; }
-    if (zap.length < 10) { status.className = 'status err'; status.textContent = 'Informe o WhatsApp com DDD.'; return; }
-    status.className = 'status ok';
-    status.textContent = 'Protótipo: o formulário ainda não está ligado a nada. Nenhum dado foi enviado.';
-  });
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var reveals = document.querySelectorAll('.hist__copy, .hist__art .sub, .hist__art-grid .gal__i, .logo__in > *, .pride > *, .mosaic .gal__i, .cal__r:not([hidden]), .members__intro, .plan, .shop__h, .prod, .news__intro, .news__image, .news__card, .join > *');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(function (el) {
+      el.classList.add('reveal');
+      if (el.getBoundingClientRect().top < window.innerHeight * .9) el.classList.add('is-visible');
+      else observer.observe(el);
+    });
+    document.documentElement.classList.add('motion-ready');
+  }
 })();
 </script>
 
